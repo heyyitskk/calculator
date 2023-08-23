@@ -137,24 +137,32 @@ function setUpButtonClickEvent(){
             }
             else if(flag == 1 )
             {   
-                
-                if(!isFinite(op1) || op1 == 0)
-                    flag = 0;
-                op2 += op.value;
-                ans = operate(op1, op2, opr);
-                document.getElementById("number").value = ans;
-                document.getElementById("text").value = op2;
-                dis = ans;
-                sflag = 0;
+                if(op2.includes(".") && op.value == "."){
+                    document.getElementById("text").value = op2;
+                }
+                else{
+                    if(!isFinite(op1) || op1 == 0)
+                        flag = 0;
+                    op2 += op.value;
+                    ans = operate(op1, op2, opr);
+                    document.getElementById("number").value = ans;
+                    document.getElementById("text").value = op2;
+                    dis = ans;
+                    sflag = 0;
+                }
             }
             else {
-                if(!isFinite(op1) && op1 != "-")//this needs some fix but will do the job
-                    op1 = "";
-                op1 += op.value;
-                document.getElementById("text").value = op1;
-                dis = op1;
-                sflag = 0;
-                
+                if(op1.includes(".") && op.value == "."){
+                    document.getElementById("text").value = op1;
+                }
+                else{
+                    if(!isFinite(op1) && op1 != "-")//this needs some fix but will do the job
+                        op1 = "";
+                    op1 += op.value;
+                    document.getElementById("text").value = op1;
+                    dis = op1;
+                    sflag = 0;
+                }
             }
         });
     }
