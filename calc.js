@@ -102,9 +102,9 @@ function setUpButtonClickEvent(){
                 document.getElementById("text").value = dis;
                 mf = 1;
             }
-            else if(op.value == "+" || op.value == "-" ||op.value == "*" ||op.value == "/"){              
+            else if(op.value == "+" || op.value == "-" ||op.id == "*" ||op.id == "/"){              
                 if(sflag != 1){
-                    opr = op.value;
+                    opr = op.id;
                     dis += opr;
                     document.getElementById("text").value = dis;
                     flag = 1;
