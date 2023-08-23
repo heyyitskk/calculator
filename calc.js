@@ -89,10 +89,11 @@ function setUpButtonClickEvent(){
     dele();
     for(const op of ops){
         op.addEventListener("click", () => {
-            if(op.value == "-" && mf == 0){
+            if(op.value == "-" && mf == 0 && op1 == ''){
                 if (flag == 0){
                     op1 += op.value;
                     dis = op1;
+                    
                 }
                 else if (flag == 1){
                     op2 += op.value;
@@ -137,7 +138,7 @@ function setUpButtonClickEvent(){
             else if(flag == 1 )
             {   
                 
-                if(isFinite(op1) || op1 == 0)
+                if(!isFinite(op1) || op1 == 0)
                     flag = 0;
                 op2 += op.value;
                 ans = operate(op1, op2, opr);
