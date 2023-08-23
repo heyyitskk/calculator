@@ -1,0 +1,77 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div#calc {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+    border: solid 10px rgb(29, 28, 28);
+    width: 260px;
+    border-radius: 10px;
+}
+
+div#totalD{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+div.dis{
+    margin: 0px;
+}
+
+div#cd {
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+
+}
+
+input#clear.cd{
+    background-color:indigo;
+    color: aliceblue;
+}
+
+div.outerD{
+    margin: 0px;
+}
+
+div {
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+    background-color:rgb(52, 50, 50);
+}
+
+input.dis{
+    height: 35px;
+    width: 240px;
+    padding: 5px;
+    border: none;
+    background-color: aquamarine;
+    display: flex;
+    align-items: flex-end;
+}
+
+input#number.dis {
+    text-align: right;
+}
+
+input.op {
+    width: 50px;
+    height: 30px;
+}
+
+input.cd {
+    height: 35px;
+    width: 115px;
+}
+
+input {
+    background-color:gray;
+}
